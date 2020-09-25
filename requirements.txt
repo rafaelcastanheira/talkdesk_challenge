@@ -1,0 +1,6 @@
+pip install:
+flask
+flask_restx
+json
+itertools
+requests
