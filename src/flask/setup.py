@@ -5,4 +5,5 @@ app = Flask(__name__)
 api.init_app(app)
 
 if __name__ == "__main__":
+    # hosting API in the following host and port
     app.run(host="localhost", port=8080, debug=True)
