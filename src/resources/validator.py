@@ -31,6 +31,8 @@ def remove_indicator(number: str):
 def get_prefixes():
     # file_path = "C:\\Users\\rafae\\PycharmProjects\\talkdesk_challenge\\src\\resources\\prefixes.txt"
     filename = os.path.expanduser('~/prefixes.txt')
+    print('dirname():', os.path.dirname(__file__))  # directory component (relative or absolute)
+    print('abspath():', os.path.abspath(__file__))  # Absolute filename
 
     try:
         f = open(filename, 'r')
