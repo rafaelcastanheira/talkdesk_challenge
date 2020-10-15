@@ -1,4 +1,4 @@
-import os
+from os import environ
 from flask import Flask
 from src.flask.endpoint import api
 
@@ -7,5 +7,4 @@ api.init_app(app)
 
 if __name__ == "__main__":
     # hosting API in the following host and port
-    port = os.environ['PORT']
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host="0.0.0.0", port=environ.get("PORT", 5000), debug=True)

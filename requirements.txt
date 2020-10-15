@@ -1,4 +1,5 @@
 gunicorn==20.0.4
-flask
+flask~=1.1.2
 flask_restx
-requests
+requests~=2.24.0
+environ~=1.0
