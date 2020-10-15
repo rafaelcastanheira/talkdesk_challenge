@@ -1,1 +1,1 @@
-web: python3 -m src.flask.setup
+web: python3 -m src.flask.setup runserver 0.0.0.0:5000
