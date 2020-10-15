@@ -1,1 +1,1 @@
-web: gunicorn setup:setup
+web: python3 -m src.flask.setup
