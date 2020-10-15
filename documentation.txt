@@ -1,4 +1,0 @@
-Documentation
-
-In order to create and host an API, I've used Flask, a Python library that allows the developer to choose a host (in this case: localhost (127.0.0.1)) and also a port (8080 in this case).
-Therefore, the talkdesk_challenge/src/flask/setup.py must be run first. Only then is the API ready to be run by the validate.sh and receive the POST request.
