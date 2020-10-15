@@ -1,3 +1,6 @@
+import os
+from flask import app
+
 from src.resources.phone_number_info import is_number_valid, PhoneNumberInfo
 
 
@@ -29,8 +32,10 @@ def remove_indicator(number: str):
 
 def get_prefixes():
     file_path = "C:\\Users\\rafae\\PycharmProjects\\talkdesk_challenge\\src\\resources\\prefixes.txt"
+    filename = os.path.join(app.instance_path, 'prefixes.txt')
+
     try:
-        f = open(file_path, 'r')
+        f = open(filename, 'r')
     except OSError:
         raise Exception('File path not found')
     lines = f.readlines()
