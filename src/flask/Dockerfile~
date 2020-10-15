@@ -1,0 +1,18 @@
+from alpine:latest
+
+RUN apk add py3-pip
+
+RUN apk add --no-cache python3-dev \
+&& pip3 install --upgrade pip
+
+WORKDIR /setup
+
+COPY . /setup
+
+RUN pip3 --no-cache-dir install -r requirements.txt
+
+EXPOSE 8080
+
+ENTRYPOINT ["python3"]
+
+CMD ["-m src.flask.setup"]
