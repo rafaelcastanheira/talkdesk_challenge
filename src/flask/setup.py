@@ -1,10 +1,13 @@
-from os import environ
+import os
 from flask import Flask
 from src.flask.endpoint import api
+
+ASSETS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
 api.init_app(app)
 
 if __name__ == "__main__":
     # hosting API in the following host and port
-    app.run(host="0.0.0.0", port=environ.get("PORT", 5000), debug=True)
+    context = ('local.crt', 'local.key')
+    app.run(host="https://rafiquicf.herokuapp.com", port=os.environ.get("PORT", 5000), debug=True)
