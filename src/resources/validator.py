@@ -1,6 +1,6 @@
 import os
-from flask import app
 
+from src.flask.setup import app
 from src.resources.phone_number_info import is_number_valid, PhoneNumberInfo
 
 
