@@ -1,1 +1,1 @@
-web: python3 -m src.flask.setup
+worker: python3 -m src.flask.setup
